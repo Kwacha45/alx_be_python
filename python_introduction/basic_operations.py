@@ -1,5 +1,5 @@
 number1 = 10
-number2 =5
+number2 = 5
 sum=int_number1 + int_number2
 subtraction=int_number1-int_number2
 multiplication=int_number1 * int_number2
