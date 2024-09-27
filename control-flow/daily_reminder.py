@@ -1,20 +1,28 @@
-Task=input("Enter the task description:")
-Priority=input("Enter the task priority (high, medium, low):")
-Time_bound=input("Is the task time-bound? (yes or no):")
+# Prompt user to input a task description
+task = input("Enter your task: ")
 
-match Priority:
+# Prompt user to input the task's priority (high, medium, low)
+priority = input("Priority (high/medium/low): ").lower()
+
+# Prompt user to input if the task is time-bound (yes or no)
+time_bound = input("Is it time-bound? (yes/no): ").lower()
+
+# Use match case to react based on the priority and prepare the priority level message
+match priority:
     case "high":
-        print(f"Task '{Task}' is marked as HIGH priority. Complete it as soon as possible!")
+        priority_message = "high priority"
     case "medium":
-        print(f"Task '{Task}' is marked as MEDIUM priority. Make sure to complete it soon.")
+        priority_message = "medium priority"
     case "low":
-        print(f"Task '{Task}' is marked as LOW priority. Complete it when you have time.")
+        priority_message = "low priority"
     case _:
-        print(f"Task '{Task}' has an unrecognized priority. Defaulting to low priority.")
-if Time_bound == "yes":
+        priority_message = "unrecognized priority (defaulting to low)"
+
+# Use an if statement to modify the reminder if the task is time-bound
+if time_bound == "yes":
     time_message = "that requires immediate attention today!"
 else:
     time_message = "which can be handled based on your availability."
 
 # Print the final reminder message
-print(f"\nReminder: Task '{Task}' is a {Priority} task {time_message}")
+print(f"\nReminder: '{task}' is a {priority_message} task {time_message}")
