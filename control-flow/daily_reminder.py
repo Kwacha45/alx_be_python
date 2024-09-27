@@ -25,4 +25,4 @@ else:
     time_message = "which can be handled based on your availability."
 
 # Print the final reminder message
-print(f"\nReminder: '{task}' is a {priority_message} task {time_message}")
+print(f"Reminder: '{task}' is a {priority_message} task {time_message}")
