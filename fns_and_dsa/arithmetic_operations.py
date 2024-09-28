@@ -15,6 +15,7 @@ def perform_operation(num1: float, num2: float, operation: str):
     else:
         return "Error: Invalid operation"
 
+
 from arithmetic_operations import perform_operation
 def main():
     print("Arithmetic Operations")
