@@ -43,5 +43,7 @@ elif operation == "withdraw":
     print(f"Withdrew ${amount:.2f} from {account_name}'s account.")
 else:
   print(f"Invalid operation: {operation}")
+def display_balance(self):
 
+  print(f"Current Balance: ${self.account_balance:.2f}")
 bank_account.display_balance()
