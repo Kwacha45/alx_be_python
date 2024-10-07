@@ -25,7 +25,6 @@ class TestSimpleCalculator(unittest.TestCase):
     self.assertEqual(result, 4)
 
     with self.assertRaises(ZeroDivisionError):
-      calculator.divide(10, 0)  # Might be using 'calculator' here for consistency
-
+      result = calc.divide(10, 0)
 if __name__ == "__main__":
   unittest.main()
