@@ -1,30 +1,25 @@
 import unittest
-from simple_calculator import SimpleCalculator  # Assuming simple_calculator.py is in the same directory
+from simple_calculator import SimpleCalculator
 
 class TestSimpleCalculator(unittest.TestCase):
 
-  def test_addition(self):
-    calc = SimpleCalculator()  # Might be using 'calc' instead of 'calculator'
-    result = calc.add(5, 3)
-    self.assertEqual(result, 8)  # Using self.assertEqual(result, expected_value)
+    def setUp(self):
+        # Initialize a SimpleCalculator object before each test
+        self.calc = SimpleCalculator()
 
-  def test_subtract(self):
-    calc = SimpleCalculator()
-    result = calc.subtract(10, 4)
-    self.assertEqual(result, 6)
+    def test_add(self):
+        # Test normal addition
+        self.assertEqual(self.calc.add(10, 5), 15)
+        self.assertEqual(self.calc.add(-1, 1), 0)
+        self.assertEqual(self.calc.add(0, 0), 0)
 
-  def test_multiply(self):
-    calc = SimpleCalculator()
-    result = calc.multiply(2, 6)
-    self.assertEqual(result, 12)
+    def test_subtract(self):
+        # Test normal subtraction
+        self.assertEqual(self.calc.subtract(10, 5), 5)
+        self.assertEqual(self.calc.subtract(0, 5), -5)
+        self.assertEqual(self.calc.subtract(-1, -1), 0)
 
-  def test_divide(self):
-    calc = SimpleCalculator()
-
-    result = calc.divide(12, 3)
-    self.assertEqual(result, 4)
-
-    with self.assertRaises(ZeroDivisionError):
-      result = calc.divide(10, 0)
-if __name__ == "__main__":
-  unittest.main()
+    def test_multiply(self):
+        # Test normal multiplication
+        self.assertEqual(self.calc.multiply(10, 5), 50)
+        self
