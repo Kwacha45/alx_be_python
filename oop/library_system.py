@@ -1,5 +1,4 @@
 class Book:
-
   def __init__(self, title, author):
     self.title = title
     self.author = author
@@ -8,12 +7,12 @@ class Book:
     return f"{self.title} by {self.author}"
 
 class EBook(Book):
-  def __init__(self, title, author, file_size):
+  def __init__(self, title, author, file_size_kb):
     super().__init__(title, author)  # Call base class constructor
-    self.file_size = file_size
+    self.file_size_kb = file_size_kb
 
   def __str__(self):
-    return f"{super().__str__()} (EBook, {self.file_size} MB)"
+    return f"{super().__str__()} (EBook, {self.file_size_kb} KB)"
 
 class PrintBook(Book):
   def __init__(self, title, author, page_count):
