@@ -7,12 +7,12 @@ class Calculator:
 
   @classmethod
   def multiply(cls, a, b):
-    print(f"Performing {cls.calculation_type}:")
+    print(f"Calculation type: {cls.calculation_type}")
     return a * b
 
 # Example usage
 sum_result = Calculator.add(5, 3)
 product_result = Calculator.multiply(4, 2)
 
-print(f"Sum: {sum_result}")
-print(f"Product: {product_result}")
+print(f"The sum is: {sum_result}")
+print(f"The product is: {product_result}")
